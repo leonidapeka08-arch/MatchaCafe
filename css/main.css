@@ -1094,7 +1094,7 @@ body {
   height: min(700px, 80vh);
   pointer-events: none;
   user-select: none;
-  z-index: 1;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   .featured__flower {
@@ -1103,7 +1103,6 @@ body {
 }
 @media (max-width: 767px) {
   .featured__flower {
-    z-index: 0;
     top: 140px;
     left: 55%;
     transform: translateX(-20%) scale(1.19);
