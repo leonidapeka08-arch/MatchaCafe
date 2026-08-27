@@ -1,0 +1,31 @@
+@import 'variables';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: $transition-smooth;
+    white-space: nowrap;
+
+    &--primary {
+        background-color: $color-matcha-light;
+        color: $color-bg-white;
+
+        &:hover {
+            background-color: $color-matcha-dark;
+        }
+    }
+
+    &--secondary {
+        background-color: $color-pink-accent;
+        color: $color-bg-white;
+
+        &:hover {
+            background-color: darken($color-pink-accent, 10%);
+        }
+    }
+}

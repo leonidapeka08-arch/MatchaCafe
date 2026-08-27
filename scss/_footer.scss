@@ -1,0 +1,213 @@
+.footer {
+  width: 100%;
+  background-color: $color-matcha-light;
+  box-sizing: border-box;
+
+  &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 9.03vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    svg{
+        flex: 1 0 auto;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 20px 45px;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px;
+      gap: 15px;
+
+      > svg {
+        width: 80px;
+        height: 80px;
+        flex: 0 0 80px;
+      }
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+    width: 100%;
+
+    @media (max-width: $breakpoint-md) {
+      gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+      gap: 15px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 1.5vw, 10px);
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      max-width: 100%;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 767px) {
+      flex-wrap: nowrap;
+      gap: 8px;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-width: 90px;
+    max-width: 139.5px;
+    padding: 10px 0;
+    box-sizing: border-box;
+
+    font-family: "Aldrich", sans-serif;
+    font-size: clamp(13px, 1.2vw, 16px);
+    font-weight: 400;
+    color: $color-matcha-pale;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.2s ease;
+
+    @media (max-width: $breakpoint-md) {
+      max-width: none;
+      width: auto;
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+  }
+
+  &__copyright {
+    font-family: "Aldrich", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-matcha-pale;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: $breakpoint-md) {
+      order: 3;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      order: 3;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 16px;
+
+    @media (max-width: $breakpoint-md) {
+      order: 2;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      justify-content: center;
+      order: 2;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    
+    svg {
+        display: block;
+        
+        path {
+            fill: $color-matcha-pale;
+            transition: fill 0.2s ease;
+      }
+    } 
+}
+// pjesa MOBILEE
+  @media (max-width: 767px) {
+  .footer__container {
+    padding: 20px 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    // Logo
+    > svg {
+      width: 80px;
+      height: 80px;
+      flex: 0 0 80px;
+    }
+
+    .footer__center {
+      display: contents;
+    }
+
+    .footer__nav {
+      order: 1;
+      width: 100%;
+      flex-wrap: nowrap;
+      gap: 17px;
+      
+      @media (max-width: 374px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .footer__socials {
+      order: 2;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer__copyright {
+      order: 3;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .footer__link {
+    min-width: 0;
+    max-width: none;
+    flex: 0 1 auto;
+    
+  }
+
+}
+}

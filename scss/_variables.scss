@@ -1,0 +1,24 @@
+// Colors
+$color-bg-cream: #F5EFEB;
+$color-bg-white: #FFFFFF;
+$color-matcha-dark: #6C804D;
+$color-matcha-light: #B6BB79;
+$color-matcha-pale: #F3EBD8;
+$color-pink-accent: #F297A0;
+$color-text-dark: #4A403A;
+$color-text-muted: #7E7570;
+$color-overlay: rgba(74, 64, 58, 0.4);
+body {
+    background-color: #F3EBD8;
+    font-family: 'Aldrich', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$breakpoint-lg: 992px;
+$breakpoint-md: 767px;

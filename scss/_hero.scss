@@ -1,0 +1,379 @@
+@import "variables"; 
+ 
+.hero { 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-around; 
+  // gap: clamp(20px, 3.5vw, 48px); 
+
+  width: 100%;
+  max-width: 1440px; 
+  margin: 0 auto; 
+  padding: 70px 130px 105px;
+  box-sizing: border-box; 
+ 
+  @media (min-width: 1441px) { 
+    padding: 70px 130px 105px; 
+    gap: 48px; 
+  } 
+ 
+  @media (max-width: 1024px) { 
+    padding: 70px 10vw ; 
+  } 
+ 
+  @media (max-width: $breakpoint-md) { 
+    flex-direction: column-reverse; 
+    justify-content: flex-start; 
+    padding: 50px 7.15vw; 
+    gap: 24px; 
+    overflow: hidden; 
+  } 
+ 
+  &__content { 
+    position: relative; 
+    flex: 1 1 0; 
+    min-width: 0; 
+    max-width: 520px; 
+ 
+    @media (max-width: $breakpoint-md) { 
+      width: 100%; 
+      max-width: 100%; 
+      padding-bottom: 94px;
+    } 
+  } 
+ 
+  &__title { 
+    width: fit-content; 
+    position: relative; 
+    margin: 0 0 clamp(1.25rem, 3.558vw, 3.1875rem); 
+    font-family: "Oswald", sans-serif; 
+    font-size: clamp(2.25rem, 5.6vw, 6rem); 
+    font-weight: 700; 
+    line-height: 85px; 
+    color: $color-matcha-light; 
+ 
+    @media (max-width: $breakpoint-md) { 
+      font-size: clamp(3rem, 11.5vw, 3.8rem); 
+      line-height:85px; 
+      margin-bottom: 17px; 
+        } 
+ 
+    .hero__flower { 
+      &:nth-of-type(1) { 
+        top: -6vw; 
+        left: -1.4vw; 
+        width: clamp(45px, 6vw, 95px); 
+        height: auto; 
+        aspect-ratio: 1; 
+        transform: rotate(-35deg); 
+ 
+        @media (max-width: $breakpoint-md) { 
+          top: -30px; 
+          left: -7px; 
+          width: clamp(40px, 15.3vw, 70px); 
+          transform: rotate(-0deg); 
+        } 
+      } 
+ 
+      &:nth-of-type(2) { 
+        top: -12%; 
+        left: 96%; 
+        width: clamp(40px, 4.5vw, 75px); 
+        height: auto; 
+        aspect-ratio: 1; 
+        transform: rotate(-85deg); 
+ 
+        @media (max-width: $breakpoint-md) { 
+          top: 25%; 
+          // left: 45; 
+          right: -1%; 
+          width: clamp(55px, 30vw, 123px); 
+          transform: rotate(0deg); 
+        } 
+      } 
+    } 
+  } 
+ 
+  &__description { 
+    width: max-content; 
+    max-width: 100%; 
+    position: relative; 
+    margin: 0 0 clamp(1.25rem, 3.558vw, 3.1875rem); 
+    color: #000000; 
+    font-size: clamp(0.8rem, 1.38vw, 1.35rem); 
+    line-height: 1.8; 
+ 
+    @media (max-width: $breakpoint-md) { 
+      margin-bottom: 30px; 
+      line-height: 25px;
+      // padding-left: 2vw !important; 
+      font-size: clamp(0.8rem, 3vw, 1rem);  
+    } 
+ 
+    &::after { 
+      content: ""; 
+      position: absolute; 
+      top: 70%; 
+      right: -50px; 
+      width: clamp(48px, 12vw, 65px); 
+      height: 65px; 
+      background: url("../img/blossom-img.svg") no-repeat center / contain; 
+      transform: translateY(-50%) rotate(-90deg); 
+      pointer-events: none; 
+      display: none; 
+ 
+      @media (max-width: $breakpoint-md) { 
+        display: block; 
+        right: -52px;
+      } 
+    } 
+  } 
+ 
+  &__actions { 
+    width: fit-content; 
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    gap: clamp(12px, 3vw, 63px);
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+ 
+    @media (max-width: $breakpoint-md) { 
+      width:fit-content; 
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 30px; 
+    } 
+ 
+    &::after { 
+      content: ""; 
+      position: absolute; 
+      right: -60%; 
+      bottom: 0; 
+      width: clamp(40px, 12vw, 60px); 
+      height: 140px; 
+ 
+      background: url("../img/blossom-img.svg") no-repeat center / contain; 
+      transform: rotate(-90deg); 
+ 
+      pointer-events: none; 
+      user-select: none; 
+      display: none; 
+ 
+      @media (max-width: $breakpoint-md) { 
+        display: block; 
+        right: -85px;
+        bottom: 20px;
+      } 
+    } 
+  } 
+ 
+  &__btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px; 
+    padding: clamp(10px, 1.2vw, 16px) clamp(16px, 2vw, 32px);
+    border: 1px solid transparent; 
+    border-radius: 999px; 
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 400; 
+    text-decoration: none; 
+    white-space: nowrap; 
+    transition: $transition-smooth; 
+
+          @media (max-width: $breakpoint-md) { 
+            padding:16px 32px;
+            font-size: 18px;
+          }
+ 
+    i, 
+    &-icon { 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      flex-shrink: 0; 
+ 
+      width: 20px; 
+      height: 20px; 
+      transition: $transition-smooth; 
+    } 
+ 
+    &--primary { 
+      width: auto; 
+      background-color: $color-matcha-light; 
+      color: $color-bg-white; 
+ 
+      @media (max-width: $breakpoint-md) { 
+        max-width: 181px; 
+      } 
+ 
+      &:hover { 
+        background-color: transparent; 
+        border-color: $color-matcha-light; 
+        color: $color-matcha-light; 
+      } 
+ 
+      &:active { 
+        background-color: #f297a0; 
+        border-color: #f297a0; 
+        color: $color-bg-white; 
+      } 
+    } 
+ 
+    &--secondary { 
+      width: auto; 
+      background-color: $color-pink-accent; 
+      border-color: $color-bg-white; 
+      color: $color-matcha-pale; 
+ 
+      @media (max-width: $breakpoint-md) { 
+        max-width: 248px; 
+      } 
+    } 
+  } 
+ 
+  &__media { 
+    position: relative; 
+    flex: 0 0 auto; 
+    width: clamp(260px, 32.5vw, 524px); 
+ 
+    @media (max-width: $breakpoint-md) { 
+      width: 100%; 
+      max-width: 100%; 
+    } 
+ 
+    .hero__flower { 
+      @media (max-width: $breakpoint-md) { 
+        display: none; 
+      } 
+ 
+      &:nth-of-type(2) { 
+        top: 1%; 
+        left: 70%; 
+        width: clamp(38px, 5vw, 73px); 
+        height: auto; 
+        aspect-ratio: 1; 
+        transform: rotate(-86deg); 
+      } 
+ 
+      &:nth-of-type(3) { 
+        top: 32%; 
+        left: 91%; 
+        width: clamp(42px, 5.8vw, 84px); 
+        height: auto; 
+        aspect-ratio: 1; 
+        transform: rotate(-86deg); 
+      } 
+ 
+      &:nth-of-type(4) { 
+        top: 48%; 
+        left: 95%; 
+        width: clamp(35px, 4.8vw, 69px); 
+        height: auto; 
+        aspect-ratio: 1; 
+        transform: rotate(-90deg); 
+      } 
+ 
+      &:nth-of-type(5) { 
+        top: 89%; 
+        left: -10%; 
+        width: clamp(38px, 5vw, 73px); 
+        height: auto; 
+        aspect-ratio: 1; 
+        transform: rotate(-86deg); 
+      } 
+    } 
+  } 
+ 
+  &__image { 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 524 / 623; 
+    object-fit: cover; 
+ 
+    @media (max-width: $breakpoint-md) { 
+      display: none; 
+    } 
+  } 
+ 
+  &__flower { 
+    position: absolute; 
+    z-index: 2; 
+    display: block; 
+    pointer-events: none; 
+    user-select: none; 
+ 
+    &--mobile-only { 
+      display: none; 
+ 
+      @media (max-width: $breakpoint-md) { 
+        display: block; 
+      } 
+    } 
+  } 
+
+
+  // LOCK THE DESKTOP DESIGN TO THE 1440px VERSION
+
+  @media (min-width: 1440px) {
+
+    &__title {
+      margin-bottom: 51.24px;
+      font-size: 80.64px;
+
+      .hero__flower {
+        &:nth-of-type(1) {
+          top: -86.4px;
+          left: -20.16px;
+          width: 86.4px;
+        }
+
+        &:nth-of-type(2) {
+          width: 64.8px;
+        }
+      }
+    }
+
+    &__description {
+      margin-bottom: 51.24px;
+      font-size: 20px;
+    }
+
+    &__actions {
+      // gap: 48px;
+    }
+
+    &__btn {
+      height: 54.72px;
+      padding: 0 28.8px;
+      font-size: 18px;
+    }
+
+    &__media {
+      width: 470px;
+
+      .hero__flower {
+        &:nth-of-type(2) {
+          width: 72px;
+        }
+
+        &:nth-of-type(3) {
+          width: 83.52px;
+        }
+
+        &:nth-of-type(4) {
+          width: 69.12px;
+        }
+
+        &:nth-of-type(5) {
+          width: 72px;
+        }
+      }
+    }
+  }
+}
